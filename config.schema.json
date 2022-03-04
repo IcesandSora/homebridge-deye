@@ -1,0 +1,124 @@
+{
+  "pluginAlias": "DEYE",
+  "pluginType": "platform",
+  "singular": false,
+  "schema": {
+    "type": "object",
+    "title": "Homebridge-Deye",
+    "required": [
+      "mqttBaseInfo",
+      "devices"
+    ],
+    "properties": {
+      "mqttBaseInfo": {
+        "type": "object",
+        "title": "MQTT Settings",
+        "description": "The MQTT connection settings.",
+        "required": [
+          "mqttHost",
+          "endPoint",
+          "mqttPort",
+          "username",
+          "password",
+          "clientId"
+        ],
+        "properties": {
+          "mqttHost": {
+            "type": "string",
+            "title": "MQTT Server Address",
+            "description": "The MQTT server address of your devices."
+          },
+          "mqttPort": {
+            "type": "string",
+            "title": "MQTT Server Port",
+            "description": "The MQTT server port of your devices."
+          },
+          "endPoint": {
+            "type": "string",
+            "title": "MQTT EndPoint",
+            "description": "The MQTT endpoint of your devices."
+          },
+          "username": {
+            "type": "string",
+            "title": "MQTT Username",
+            "description": "The MQTT username of your devices."
+          },
+          "password": {
+            "type": "string",
+            "title": "MQTT Password",
+            "description": "The MQTT password of your devices."
+          },
+          "clientId": {
+            "type": "string",
+            "title": "MQTT clientId",
+            "description": "The MQTT clintId of your devices."
+          }
+        },
+        "additionalProperties": true
+      },
+      "devices": {
+        "type": "array",
+        "title": "Devices",
+        "description": "If you have multiple or one device you can put them below.",
+        "additionalItems": true,
+        "items": {
+          "type": "object",
+          "title": "Device Settings",
+          "required": [
+            "name",
+            "model",
+            "productId",
+            "deviceId",
+            "fanControl",
+            "dryClothes",
+            "sleepMode"
+          ],
+          "properties": {
+            "name": {
+              "type": "string",
+              "title": "Name",
+              "description": "The name of your device."
+            },
+            "model": {
+              "type": "string",
+              "title": "Device Model",
+              "description": "Please add truthfully, although this setting is not used in the current version, it is not excluded from being used in future versions."
+            },
+            "productId": {
+              "type": "string",
+              "title": "Device ProductId",
+              "description": "The productId of your device."
+            },
+            "deviceId": {
+              "type": "string",
+              "title": "Device DeviceId",
+              "description": "The deviceId of your device."
+            },
+            "fanControl": {
+              "type": "boolean",
+              "title": "Fan Speed Control",
+              "description": "Enable your device's fan speed setting in HomeKit. Caution: Some devices does not support the fan speed setting function"
+            },
+            "temperatureSensor": {
+              "type": "boolean",
+              "title": "Enable Temperature Sensor",
+              "description": "Enable your device's temperature sensor display in HomeKit. Caution: Some devices does not support this function"
+            },
+            "dryClothes": {
+              "type": "boolean",
+              "title": "Enable Dry Clothes Mode",
+              "description": "Enable your device's dry clothes display in HomeKit. It will appear as a switch. Caution: Some devices does not support this function"
+            },
+            "sleepMode": {
+              "type": "boolean",
+              "title": "Enable Sleep Mode",
+              "description": "Enable your device's sleep mode display in HomeKit. It will appear as a switch. Caution: Some devices does not support this function"
+            }
+          },
+          "additionalProperties": true
+        }
+      }
+    },
+    "additionalProperties": true
+  }
+}
