@@ -4,6 +4,7 @@
   "name": "homebridge-deye",
   "version": "1.0.0",
   "description": "Connect the DEYE dehumidifier to Homekit.",
+  "author": "Icesand Sora",
   "license": "AGPL-3.0",
   "repository": {
     "type": "git",
