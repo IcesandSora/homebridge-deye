@@ -1,5 +1,5 @@
 {
-  "private": true,
+  "private": false,
   "displayName": "Homebridge Deye",
   "name": "homebridge-deye",
   "version": "1.0.0",
