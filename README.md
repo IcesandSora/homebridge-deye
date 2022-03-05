@@ -1,6 +1,7 @@
 # Homebridge Deye
 
-[![homebridge-deye](https://badgen.net/npm/v/homebridge-deye?icon=npm)](https://www.npmjs.com/package/homebridge-deye)[![license](https://badgen.net/github/license/IcesandSora/homebridge-deye)](https://github.com/IcesandSora/homebridge-deye/blob/master/LICENSE)
+[![homebridge-deye](https://badgen.net/npm/v/homebridge-deye?icon=npm)](https://www.npmjs.com/package/homebridge-deye)
+[![license](https://badgen.net/github/license/IcesandSora/homebridge-deye)](https://github.com/IcesandSora/homebridge-deye/blob/master/LICENSE)
 
 Connects the Deye dehumidifier to HomeKit and allows control via the native iOS Home App and Siri. This plug-in theoretically supports most Deye dehumidifiers.
 
@@ -50,9 +51,15 @@ Installing the Dehumidifier plugin
 sudo npm install -g homebridge-deye
 ```
 
-## Configure
+## Configuration
 
 This plugin can be configured in Homebridge Config UI X, or manually.
+
+You can use the [Deye Device Information Getter](https://deyedev.tat.moe/) to get the configuration information of your device.
+
+Open Deye Device Information Getter, enter the cell phone number and password of your Deye account, and click Login. This page should display the server connection information and device information.
+
+**Please note: Since the Deye account only supports single-side login, it is normal that your App may receive a notification that "Your account is logged in elsewhere". This is normal.**
 
 Add the `DEYE` platform to `config.json` in the home directory within `.homebridge`.
 
@@ -129,8 +136,8 @@ Alternatively, you can choose to enable DryClothes mode or Sleep mode, and then 
 
 `sleepMode` [Required] Whether to enable the sleep mode switch. May only be supported by some models.
 
-## Special thanks
+## Special Thanks
 
-[@yamisenyuki](https://github.com/yamisenyuki) - Writing the code
+[@yamisenyuki](https://github.com/yamisenyuki) - Writing the code and [Deye Device Information Getter](https://github.com/yamisenyuki/Deye-Device-Information-Getter)
 
 [HAP-NodeJS](https://github.com/KhaosT/HAP-NodeJS) and [homebridge](https://github.com/nfarina/homebridge) - for making this possible.

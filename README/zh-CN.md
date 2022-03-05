@@ -1,6 +1,7 @@
 # Homebridge Deye
 
-[![homebridge-deye](https://badgen.net/npm/v/homebridge-deye?icon=npm)](https://www.npmjs.com/package/homebridge-deye)[![license](https://badgen.net/github/license/IcesandSora/homebridge-deye)](https://github.com/IcesandSora/homebridge-deye/blob/master/LICENSE)
+[![homebridge-deye](https://badgen.net/npm/v/homebridge-deye?icon=npm)](https://www.npmjs.com/package/homebridge-deye)
+[![license](https://badgen.net/github/license/IcesandSora/homebridge-deye)](https://github.com/IcesandSora/homebridge-deye/blob/master/LICENSE)
 
 将德业除湿机接入 HomeKit，并可以通过原生 iOS 家庭 App 和 Siri 进行控制。此插件理论支持大部分德业除湿机。
 
@@ -53,6 +54,12 @@ sudo npm install -g homebridge-deye
 ## 配置
 
 此插件可以在 Homebridge Config UI X 进行配置，也可以手动进行配置。
+
+你可以使用 [德业设备信息获取器（Deye Device Information Getter）](https://deyedev.tat.moe/)来获取设备的配置信息。
+
+打开德业设备信息获取器，输入德业账号的手机号和密码，点击 Login。这时此网页应该显示服务器连接信息和设备信息。
+
+**请注意：由于德业账号仅支持单端登录，所以你的 App 可能会收到“你的账号已在别处登录”的通知，这是正常的。**
 
 在 `.homebridge` 内的主目录中的 `config.json` 中添加 `DEYE` 平台。
 
@@ -131,6 +138,6 @@ sudo npm install -g homebridge-deye
 
 ## 特别感谢
 
-[@yamisenyuki](https://github.com/yamisenyuki) - 编写代码
+[@yamisenyuki](https://github.com/yamisenyuki) - 编写代码与[德业设备信息获取器](https://github.com/yamisenyuki/Deye-Device-Information-Getter)
 
 [HAP-NodeJS](https://github.com/KhaosT/HAP-NodeJS) 和 [homebridge](https://github.com/nfarina/homebridge) - 使这成为可能.
