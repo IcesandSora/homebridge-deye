@@ -66,6 +66,8 @@ export class DeyePlatform implements DynamicPlatformPlugin {
           clientId: mqttBaseInfo.clientId,
         });
 
+        this.log.info('Starting Pull devices status');
+
         mqttClient.handleMessage = async (packet, callback) => {
           this.log.debug('handleMessage', packet);
           // console.log(packet)

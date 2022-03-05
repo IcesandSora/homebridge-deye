@@ -270,7 +270,7 @@ export class DeyeDehumidifierAccessory {
     mqttClient.publish(this.commandTopic, Buffer.from([0, 1]));
     setInterval(() => {
       mqttClient.publish(this.commandTopic, Buffer.from([0, 1]));
-      this.platform.log.info(`Getting ${accessory.context.device.name} Status...`);
+      this.platform.log.debug(`Getting ${accessory.context.device.name} Status...`);
     }, 60000);
   }
 
