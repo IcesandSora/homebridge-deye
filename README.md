@@ -1,5 +1,6 @@
 # Homebridge Deye
 
+[![verified-by-homebridge](https://badgen.net/badge/homebridge/verified/purple)](https://github.com/homebridge/homebridge/wiki/Verified-Plugins)
 [![homebridge-deye](https://badgen.net/npm/v/homebridge-deye?icon=npm)](https://www.npmjs.com/package/homebridge-deye)
 [![license](https://badgen.net/github/license/IcesandSora/homebridge-deye)](https://github.com/IcesandSora/homebridge-deye/blob/master/LICENSE)
 
