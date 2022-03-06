@@ -134,4 +134,4 @@ dist
 .yarn/build-state.yml
 .pnp.*
 
-./README
+README/img
